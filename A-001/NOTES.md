@@ -71,7 +71,7 @@ Why: It showed where python on PC. First should show folder on PC. Second showed
 
 Rows in: 10
 Duplicates removed: 2
-Rows out: 2
+Rows out: 8
 Blank phones: 2
 Phones not normalised: 1
 
