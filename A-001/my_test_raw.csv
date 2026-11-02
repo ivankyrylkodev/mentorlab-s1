@@ -1,0 +1,11 @@
+name,phone,city,source_url
+Ike Studios,555-0180000,Santa Clarita,<https://example.com/dir?page=3>
+ Ike studios,555-0180000,Santa Clarita,<https://example.com/dir?page=3>
+Ike Studios,+1555 0180000,Santa Clarita,<https://example.com/dir?page=3>
+Stem Florist,555-0106000,Lakewood,<https://example.com/dir?page=3>
+Stem Florist,555-0116000,Lakewood,<https://example.com/dir?page=3>
+John Bakery,,Newport News,<https://example.com/dir?page=1>
+Ike Plumbing,    ,Abilene,<https://example.com/dir?page=4>
+John Auto Repair,555019643214,Tacoma,<https://example.com/dir?page=1>
+Lemfio Plumbing,555-0134000,,<https://example.com/dir?page=2>
+"Ike, John & Dental",555-0168000,Mobile,<https://example.com/dir?page=2>
