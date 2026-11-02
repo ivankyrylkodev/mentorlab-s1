@@ -71,14 +71,9 @@ Why: It showed where python on PC. First should show folder on PC. Second showed
 
 Rows in: 10
 Duplicates removed: 2
-Rows out: 
- Ike studios,555-0180000,Santa Clarita,<https://example.com/dir?page=3>
-Ike Studios,+1555 0180000,Santa Clarita,<https://example.com/dir?page=3>
-Blank phones: 
-John Bakery,,Newport News,<https://example.com/dir?page=1>
-Ike Plumbing,,Abilene,<https://example.com/dir?page=4>
-Phones not normalised: 
-John Auto Repair,555019643214,Tacoma,<https://example.com/dir?page=1>
+Rows out: 2
+Blank phones: 2
+Phones not normalised: 1
 
 ## AI use
 none
