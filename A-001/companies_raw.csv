@@ -1,0 +1,13 @@
+name,phone,city,source_url
+Acme Plumbing,+1 (555) 010-0001,Austin,<https://example.com/dir?page=1>
+Bright Dental,555.010.0002,Denver,<https://example.com/dir?page=1>
+  acme plumbing ,1-555-010-0001,Austin,<https://example.com/dir?page=2>
+Cedar Bakery,,Portland,<https://example.com/dir?page=1>
+Delta  Auto Repair,(555) 010-0004,,<https://example.com/dir?page=2>
+Bright Dental,+1 555 010 0002,Denver,<https://example.com/dir?page=3>
+Echo Florist, 010-0005 ,Boise,<https://example.com/dir?page=2>
+"Fox & Sons, Movers",555-010-0006,Tulsa,<https://example.com/dir?page=3>
+Cedar Bakery,,Portland,<https://example.com/dir?page=3>
+Delta Auto Repair,555 010 0004,Reno,<https://example.com/dir?page=3>
+Glen Hardware,15550100007,Austin,<https://example.com/dir?page=3>
+Café Lumière,+44 20 7946 0958,Boston,<https://example.com/dir?page=4>
