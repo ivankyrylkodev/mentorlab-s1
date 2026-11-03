@@ -41,7 +41,7 @@ def dedupe(rows):
 
 def read_rows(path):
     result = []
-    with open(path, encoding="utf-8") as f:
+    with open(path,  newline='', encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
             result.append(clean_row(row))
@@ -66,12 +66,12 @@ def main():
     rows_out = 0
     blank_phones = 0
     phones_not_normalized = 0
-    with open(input_path, encoding="utf-8") as f:
+    with open(input_path, newline='', encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for row in reader:
                 rows_in += 1
 
-    with open(output_path, encoding="utf-8") as f:
+    with open(output_path, newline='', encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for row in reader:
                 rows_out += 1
