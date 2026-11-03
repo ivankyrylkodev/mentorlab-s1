@@ -91,6 +91,12 @@ Blank phones: 2
 Phones not normalised: 1
 Confirmed in 2+ sources: 1
 
+< name,phone,city,source_url,source
+---
+> name,phone,city,source_url,sources
+
+I was mistaken when wrote name of column.
+
 ## AI use
 none
 
