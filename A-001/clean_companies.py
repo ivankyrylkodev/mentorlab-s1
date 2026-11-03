@@ -3,7 +3,7 @@ import csv
 import sys
 
 def normalize_name(text):
-    return ' '.join(text.split()).title()
+    return ' '.join(text.split())
 
 def normalize_phone(text):
     result = re.sub(r'\D', '', text)
