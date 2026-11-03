@@ -1,9 +1,9 @@
-name,phone,city,source_url
-Acme Plumbing,+15550100001,Austin,https://example.com/dir?page=1
-Bright Dental,+15550100002,Denver,https://example.com/dir?page=1
-Cedar Bakery,,Portland,https://example.com/dir?page=1
-Delta Auto Repair,+15550100004,,https://example.com/dir?page=2
-Echo Florist,010-0005,Boise,https://example.com/dir?page=2
-"Fox & Sons, Movers",+15550100006,Tulsa,https://example.com/dir?page=3
-Glen Hardware,+15550100007,Austin,https://example.com/dir?page=3
-Café Lumière,+44 20 7946 0958,Boston,https://example.com/dir?page=4
+name,phone,city,source_url,source
+Acme Plumbing,+15550100001,Austin,https://example.com/dir?page=1,2
+Bright Dental,+15550100002,Denver,https://example.com/dir?page=1,2
+Cedar Bakery,,Portland,https://example.com/dir?page=1,2
+Delta Auto Repair,+15550100004,,https://example.com/dir?page=2,2
+Echo Florist,010-0005,Boise,https://example.com/dir?page=2,1
+"Fox & Sons, Movers",+15550100006,Tulsa,https://example.com/dir?page=3,1
+Glen Hardware,+15550100007,Austin,https://example.com/dir?page=3,1
+Café Lumière,+44 20 7946 0958,Boston,https://example.com/dir?page=4,1
