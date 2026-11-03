@@ -77,7 +77,7 @@ def main():
                 rows_out += 1
                 if row['phone'] == '':
                     blank_phones += 1
-                elif not row["phone"].startswith('+1'):
+                elif not row["phone"].startswith('+1') or not len(re.sub(r'\D', '', row["phone"])) == 11:
                     phones_not_normalized += 1
     print(f"Rows in: {rows_in}")
     print(f"Duplicates removed: {rows_in - rows_out}")
