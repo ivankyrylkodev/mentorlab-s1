@@ -83,6 +83,14 @@ I lost 6 in my file. I expected for line "Stem Florist,555-0116000,Lakewood,<htt
 
 In commit 4854a42 I eddited "Rows out: " line cause I understanded mistake before run the script but forgot to change it.
 
+ ## Variation
+ Rows in: 10
+Duplicates removed: 2
+Rows out: 8
+Blank phones: 2
+Phones not normalised: 1
+Confirmed in 2+ sources: 1
+
 ## AI use
 none
 
