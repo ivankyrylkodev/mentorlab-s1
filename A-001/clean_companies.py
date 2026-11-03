@@ -19,18 +19,22 @@ def clean_row(row):
         "name": normalize_name(row["name"]),
         "phone": normalize_phone(row["phone"]),
         "city": row["city"].strip(),
-        "source_url": row["source_url"].strip()
+        "source_url": row["source_url"].strip(),
+        "sources": 1
     }
 
 def dedupe(rows):
     result = []
     add = False
+    source_cnt = 0
     for row in rows:
+        source_cnt = 0
         if len(result) == 0:
             result.append(row)
         else:
             for r in result:
                 if row["name"].lower() == r["name"].lower() and row["phone"] == r["phone"]:
+                    r["sources"] += 1
                     add = False
                     break
                 else:
@@ -49,12 +53,12 @@ def read_rows(path):
 
 def write_rows(path, rows):
     with open(path, mode='w', newline='', encoding='utf-8') as f:
-        fieldnames = [ "name", "phone", "city", "source_url"]
+        fieldnames = [ "name", "phone", "city", "source_url",  "sources"]
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         
         writer.writeheader()
         for row in rows:
-             writer.writerow({"name": row["name"], "phone": row["phone"], "city": row["city"], "source_url": row["source_url"]})
+             writer.writerow({"name": row["name"], "phone": row["phone"], "city": row["city"], "source_url": row["source_url"],  "sources": row["sources"]})
 
 
 def main():
@@ -66,6 +70,7 @@ def main():
     rows_out = 0
     blank_phones = 0
     phones_not_normalized = 0
+    more_sources = 0
     with open(input_path, newline='', encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for row in reader:
@@ -79,11 +84,14 @@ def main():
                     blank_phones += 1
                 elif not row["phone"].startswith('+1') or not len(re.sub(r'\D', '', row["phone"])) == 11:
                     phones_not_normalized += 1
+                if int(row["sources"]) > 1:
+                    more_sources += 1
     print(f"Rows in: {rows_in}")
     print(f"Duplicates removed: {rows_in - rows_out}")
     print(f"Rows out: {rows_out}")
     print(f"Blank phones: {blank_phones}")
     print(f"Phones not normalised: {phones_not_normalized}")
+    print(f"Confirmed in 2+ sources: {more_sources}")
 
 if __name__ == "__main__":
     main()
