@@ -81,6 +81,8 @@ Phones not normalised: 1
 
 I lost 6 in my file. I expected for line "Stem Florist,555-0116000,Lakewood,<https://example.com/dir?page=3>" result "Stem Florist,+15550110000,Lakewood,<https://example.com/dir?page=3>" but it was not correct.
 
+In commit 4854a42 I eddited "Rows out: " line cause I understanded mistake before run the script but forgot to change it.
+
 ## AI use
 none
 
