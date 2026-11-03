@@ -79,3 +79,5 @@ Phones not normalised: 1
 none
 
 ## Time
+Learning 60 min
+Practice 180 min
