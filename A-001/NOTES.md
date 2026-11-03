@@ -58,10 +58,10 @@ python not found
 Why: It showed where python on PC. First should show folder on PC. Second showed folder in virtual environment. Last showed that python (not pyhton3) is not found. 
 
 ## My test file
-2 None
+2 (a)
 3 (a)
 4 (b)
-5 None
+5 (c)
 6 (c)
 7 (d)
 8 (e)
@@ -74,6 +74,12 @@ Duplicates removed: 2
 Rows out: 8
 Blank phones: 2
 Phones not normalised: 1
+
+< Stem Florist,+15550116000,Lakewood,<https://example.com/dir?page=3>
+---
+> Stem Florist,+15550110000,Lakewood,<https://example.com/dir?page=3>
+
+I lost 6 in my file. I expected for line "Stem Florist,555-0116000,Lakewood,<https://example.com/dir?page=3>" result "Stem Florist,+15550110000,Lakewood,<https://example.com/dir?page=3>" but it was not correct.
 
 ## AI use
 none
