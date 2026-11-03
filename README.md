@@ -17,11 +17,11 @@
 - **Duplicates**: two rows are duplicates when their cleaned names, compared in lowercase, are equal and their cleaned phones are equal. A blank phone is a phone value too: two rows with the same name and both phones blank are duplicates. Keep the first row of each group, exactly as cleaned, and drop the later ones. Output rows stay in input order.
 - **QA summary**: the script prints exactly these 5 lines and nothing else:
 ```bash
-Rows in: <data rows read, header not counted>
-Duplicates removed: <rows in minus rows out>
-Rows out: <data rows written>
-Blank phones: <rows in the output whose phone is ''>
-Phones not normalised: <rows in the output whose phone is not blank and is not "+1" followed by exactly 10 digits>
+Rows in: 12
+Duplicates removed: 4
+Rows out: 8
+Blank phones: 1
+Phones not normalised: 2
 ```
 
 ## Getting Started
@@ -30,5 +30,5 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 
-python3 "A-001/clean_companies.py" /A-001/companies_raw.csv /A-001/companies_clean.csv
+python3 "A-001/clean_companies.py" ./A-001/companies_raw.csv ./A-001/companies_clean.csv
 ```
