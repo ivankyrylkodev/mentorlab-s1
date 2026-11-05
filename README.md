@@ -2,7 +2,7 @@
 
 ## A-001: clean_companies.py
 
-**Python 3.14**
+**Python 3.14 (python.org)**.
 
 - **[clean_companies.py](A-001/clean_companies.py)** - Program that delivers a deduplicated CSV with blanks left blank, normalised phones, a source URL on every row and a QA count.
 
