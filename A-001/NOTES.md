@@ -106,6 +106,7 @@ Confirmed in 2+ sources: 1
 > name,phone,city,source_url,sources
 
 I was mistaken when wrote name of column in my_test_expected.csv.
+Commit 280a429 changed the Stem Florist phone, not the column name.
 
 ## AI use
 none
