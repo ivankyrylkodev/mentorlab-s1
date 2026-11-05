@@ -26,11 +26,9 @@ def clean_row(row):
 def dedupe(rows):
     result = []
     add = False
-    source_cnt = 0
     for row in rows:
-        source_cnt = 0
         if len(result) == 0:
-            result.append(row)
+            result.append(dict(row))
         else:
             for r in result:
                 if row["name"].lower() == r["name"].lower() and row["phone"] == r["phone"]:
@@ -40,7 +38,7 @@ def dedupe(rows):
                 else:
                     add = True
             if add:
-                result.append(row)
+                result.append(dict(row))
     return result
 
 def read_rows(path):
@@ -49,6 +47,7 @@ def read_rows(path):
         reader = csv.DictReader(f)
         for row in reader:
             result.append(clean_row(row))
+    result = dedupe(result)
     return dedupe(result)
 
 def write_rows(path, rows):
