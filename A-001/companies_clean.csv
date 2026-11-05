@@ -1,4 +1,4 @@
-name,phone,city,source_url,source
+name,phone,city,source_url,sources
 Acme Plumbing,+15550100001,Austin,https://example.com/dir?page=1,2
 Bright Dental,+15550100002,Denver,https://example.com/dir?page=1,2
 Cedar Bakery,,Portland,https://example.com/dir?page=1,2
