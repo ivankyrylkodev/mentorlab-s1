@@ -69,6 +69,14 @@ Why: It showed where python on PC. First should show folder on PC. Second showed
 10 (g)
 11 (h)
 
+Hand-computed:
+Rows in: 10
+Duplicates removed: 2
+Rows out: 8
+Blank phones: 2
+Phones not normalised: 1
+
+Actual (script output):
 Rows in: 10
 Duplicates removed: 2
 Rows out: 8
@@ -80,6 +88,8 @@ Phones not normalised: 1
 > Stem Florist,+15550110000,Lakewood,<https://example.com/dir?page=3>
 
 I lost 6 in my file. I expected for line "Stem Florist,555-0116000,Lakewood,<https://example.com/dir?page=3>" result "Stem Florist,+15550110000,Lakewood,<https://example.com/dir?page=3>" but it was not correct.
+
+Stem Florist phone: in commit ed5ca99 the wrong file was my_test_expected.csv (it had +15550110000, correct is +15550116000). Why: because I’m a forgetful idiot who, completely by accident, used Ctrl+Z to revert to a version that didn’t include the 6. Fixed in 280a429.
 
 In commit 4854a42 I eddited "Rows out: " line cause I understanded mistake before run the script but forgot to change it.
 
@@ -95,7 +105,7 @@ Confirmed in 2+ sources: 1
 ---
 > name,phone,city,source_url,sources
 
-I was mistaken when wrote name of column.
+I was mistaken when wrote name of column in my_test_expected.csv.
 
 ## AI use
 none
