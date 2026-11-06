@@ -114,3 +114,10 @@ none
 ## Time
 Learning 60 min
 Practice 180 min
+
+## Commit corrections 
+
+ **a9ad10a** - added a second dedupe call in read_rows, which its message does not mention;
+ **10da0db** - changed "5 lines" to "6 lines" in the existing QA summary and did not add a QA summary.
+
+
