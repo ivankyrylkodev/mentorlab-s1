@@ -47,7 +47,6 @@ def read_rows(path):
         reader = csv.DictReader(f)
         for row in reader:
             result.append(clean_row(row))
-    result = dedupe(result)
     return dedupe(result)
 
 def write_rows(path, rows):
