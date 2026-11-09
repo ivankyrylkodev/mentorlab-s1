@@ -25,5 +25,5 @@ def test_dedupe_unchanged():
                          {"name": "Ike Studios","phone": "+15550180000","city": "Santa Clarita","source_url": "<https://example.com/dir?page=3>", "sources": 1},
                          {"name": "Ike Plumbing","phone": "","city": "Abilene","source_url": "<https://example.com/dir?page=4>", "sources": 1}]
 
-    assert cr.dedupe(cr.dedupe(test_dict)) == [{"name": "Ike Studios","phone": "+15550180000","city": "Santa Clarita","source_url": "<https://example.com/dir?page=3>", "sources": 2},
-                                               {"name": "Ike Plumbing","phone": "","city": "Abilene","source_url": "<https://example.com/dir?page=4>", "sources": 1}]
+    assert cr.dedupe(test_dict)  == [{"name": "Ike Studios","phone": "+15550180000","city": "Santa Clarita","source_url": "<https://example.com/dir?page=3>", "sources": 2},
+                                     {"name": "Ike Plumbing","phone": "","city": "Abilene","source_url": "<https://example.com/dir?page=4>", "sources": 1}]
