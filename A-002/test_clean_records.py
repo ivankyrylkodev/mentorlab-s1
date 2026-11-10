@@ -27,3 +27,10 @@ def test_dedupe_unchanged():
 
     assert cr.dedupe(test_dict)  == [{"name": "Ike Studios","phone": "+15550180000","city": "Santa Clarita","source_url": "<https://example.com/dir?page=3>", "sources": 2},
                                      {"name": "Ike Plumbing","phone": "","city": "Abilene","source_url": "<https://example.com/dir?page=4>", "sources": 1}]
+
+def test_check_row():
+    assert cr.check_row({"name": "Ike Studios","phone": "+15550180000","city": "Santa Clarita","source_url": "<https://example.com/dir?page=3>"}) == ''
+    assert cr.check_row({"name": "Ike Studios","phone": "+15550180000","city": "Santa Clarita","source_url": None}) == 'short row'
+    assert cr.check_row({"name": "    ","phone": "+15550180000","city": "Santa Clarita","source_url": "<https://example.com/dir?page=3>"}) == 'blank name'
+    assert cr.check_row({"name": "Ike Studios","phone": "+15550180000","city": "Santa Clarita","source_url": " "}) == 'blank source_url'
+    cr.check_row({"name": "", "phone": "+15550180000", "city": None, "source_url": "https://example.com"}) == 'short row'

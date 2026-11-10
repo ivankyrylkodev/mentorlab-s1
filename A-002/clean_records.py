@@ -23,6 +23,17 @@ def clean_row(row):
         "sources": 1
     }
 
+
+def  check_row(row):
+    if row["name"] is None or row["phone"] is None or row["city"] is None or row["source_url"] is None:
+        return 'short row'
+    elif row["name"].strip() == '':
+        return 'blank name'
+    elif row["source_url"].strip() == '':
+        return 'blank source_url'
+    else:
+        return ''
+
 def dedupe(rows):
     result = []
     add = False
@@ -90,6 +101,9 @@ def main():
     print(f"Blank phones: {blank_phones}")
     print(f"Phones not normalised: {phones_not_normalized}")
     print(f"Confirmed in 2+ sources: {more_sources}")
+
+
+
 
 if __name__ == "__main__":
     main()
